@@ -1,0 +1,31 @@
+<form class="form-user border border-secondary rounded-3 w-50  p-5 ">
+    <span class="form-title">
+        CREAR USUARIO
+    </span>
+    <div class="mb-3">
+        <label for="nombre" class="form-label">Nombre</label>
+        <input type="text" class="form-control" id="nombre" name="nombre" [(ngModel)]="usuario.nombre">
+    </div>
+    <div class="mb-3">
+        <label for="cedula" class="form-label">Cedula</label>
+        <input type="text" class="form-control" name="cedula" id="cedula" [(ngModel)]="usuario.cedula">
+    </div>
+    <div class="mb-3">
+        <label for="telefono" class="form-label">Telefono</label>
+        <input type="tel" class="form-control" id="telefono" name="tel" [(ngModel)]="usuario.celular">
+    </div>
+    <div class="mb-3">
+        <label for="correo" class="form-label">Correo</label>
+        <input type="email" class="form-control" name="correo" id="correo" [(ngModel)]="usuario.email">
+    </div>
+    <div class="mb-3 form-check">
+        <input type="checkbox" class="form-check-input" name="" id="exampleCheck1">
+        <label class="form-check-label" for="exampleCheck1">Check me out</label>
+    </div>
+    <div>
+        <a routerLink="/usuarios" class="txt1">
+                ¿Ya tienes cuenta? / Regresar
+        </a>
+    </div>
+    <button class="btn btn-primary btn-block w-100 p-2" (click)="createNewUser()">Crear cuenta</button>
+</form>

@@ -1,0 +1,27 @@
+<a class="btn btn-info mb-2" [routerLink]="['/usuarios/nuevoUsuario']" [ngStyle]="{'float':'right', 'color':'#fff','font-weight':'700'}">
+    <i class="fas fa-plus" [ngStyle]="{'color':'#fff'}"></i> Nuevo usuario
+</a>
+
+<table class="table table-bordered table-hover text-center ">
+    <thead class="table-dark text-uppercase">
+        <tr>
+            <th scope="col">nombre</th>
+            <th scope="col">cedula</th>
+            <th scope="col">celular</th>
+            <th scope="col">email</th>
+            <th scope="col">accion</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let users of usuarios">
+            <th scope="row">{{ users.nombre }}</th>
+            <td>{{ users.cedula }}</td>
+            <td>{{ users.celular }}</td>
+            <td>{{ users.email }}</td>
+            <td>
+                <i class="fas fa-edit" title="Editar" [ngStyle]="{'color':'#F9C608 ', 'margin-right':'10px','cursor':'pointer'}"></i>
+                <i class="fas fa-trash-alt" title="Eliminar" [ngStyle]="{'color':'#F9082C','cursor':'pointer'}"></i>
+            </td>
+        </tr>
+    </tbody>
+</table>
